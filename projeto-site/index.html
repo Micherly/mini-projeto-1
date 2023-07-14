@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AnimaBox</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Koulen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLogin" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLogin">Login</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Nós nunca iremos compartilhar seu email com ninguém.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Entrar na conta</button>
+            <div id="emailHelp" class="form-text">Ainda não tem cadastro?<a href="#">Clique aqui.</a></div>
+            <div id="emailHelp" class="form-text"><a href="#">Esqueceu sua senha?</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fecha modal-->
+
+  <div class="p-3 text-center bg-light border-bottom">
+    <div class="container">
+      <div class="row gy-3">
+
+        <div class="col-3">
+          <a href="index.html" target="_blank" class="float-start">
+            <img src="img/animaboxLogo.png" height="45" />
+          </a>
+        </div>
+
+        <div class="container-fluid order-lg-last col-3">
+          <div class="d-flex float-end">
+            <a href="#" style="color: #2a2827" data-bs-toggle="modal" data-bs-target="#modalLogin" class="me-1 border rounded py-2 px-3 nav-link d-flex align-items-center" target="_blank"> <i class='bx bxs-user'></i>
+            </a>
+            <a href="#" style="color: #2a2827" class="me-1 border rounded py-2 px-3 nav-link d-flex align-items-center" target="_blank"> <i class='bx bxs-heart'></i>
+            </a>
+            <a href="#" style="color: #2a2827" class="border rounded py-2 px-3 nav-link d-flex align-items-center" target="_blank"> <i class='bx bxs-cart-alt'></i>
+            </a>
+          </div>
+        </div>
+
+
+
+        <div class="col-sm-6 d-none d-md-block">
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Busque um produto" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class='bx bx-search-alt-2'></i>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top p-2 box-shadow">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nossos produtos</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="alimentacao.html">Alimentação</a>
+              <a class="dropdown-item" href="">Saúde</a>
+              <a class="dropdown-item" href="">Acessórios</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#quemSomos">Quem somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nossoTime">Nosso time</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="">
+    <div id="carrosselBanners" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrosselBanners" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carrosselBanners" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carrosselBanners" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/slide1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carousel-text">Saude &amp; Bem-estar</h5>
+            <p class="carousel-subtext">Produtos que cuidam e promovem a saúde do seu pet, <br>para uma vida cheia de energia &amp; alegria</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide2.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carousel-text">Hora da diversao!</h5>
+            <p class="carousel-subtext">Dê asas à diversão do seu pet com nossos brinquedos criativos e cativantes, feitos para <br>despertar sorrisos e rabos abanando</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide3.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carousel-text">Borocochozinho?</h5>
+            <p class="carousel-subtext">Tratamentos personalizados para o bem-estar do seu pet, disponíveis em nossa seção de medicamentos</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrosselBanners" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrosselBanners" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+  <section class="produtos d-none d-sm-block my-3">
+    <div class="container text-center py-4">
+      <div class="py-4">
+        <span class="subtitulo d-block">PRODUTOS</span>
+        <H2 class="title1">Produtos que você só encontra aqui</H2>
+      </div>
+      <div class="row my-3">
+        <div id="carrossel-cards" class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cards-wrapper">
+                <div class="card d-none d-md-block">
+                  <a href="">
+                    <img class="card-img-top" src="img/Produtos/areia.webp" alt="areiaparagatos">
+                    <div class="card-body">
+                      <h4>Areia higiênica para gatos 4kg</h4>
+                      <h6>Pipicat</h3>
+                        <p class="lead">R$ 14,90</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/desinfetante-herbalvet-ta-ourofino-1l.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Desinfetante Herbavelt 1Lt</h2>
+                      <h6>Ourofino</h3>
+                        <p class="lead">R$ 38,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/Racao-Umida-Joy-.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Ração úmida - carne & legumes</h2>
+                      <h6>Nature</h3>
+                        <p class="lead">R$ 17,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/racao-golden-formula-caes-adultos.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Ração frango & arroz 10kg </h2>
+                      <h6>Golden fórmula</h3>
+                        <p class="lead">R$ 125,00</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/Antipulgas-e-Carrapatos-Bravecto-45-a-10-kg-para-Caes-250mg-dosagem.png" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Antipulgas e carrapatos 10kg </h2>
+                      <h6>Bravecto</h3>
+                        <p class="lead">R$ 97,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/orelha-joy-bovina-natural-principal.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Orelha bovina natural 1und.</h4>
+                    <h6>Joy</h3>
+                      <p class="lead">R$ 9,90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/areia.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Areia higiênica para gatos 4kg</h4>
+                    <h6>Pipicat</h3>
+                      <p class="lead">R$ 14,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/desinfetante-herbalvet-ta-ourofino-1l.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Desinfetante Herbavelt 1Lt</h2>
+                      <h6>Ourofino</h3>
+                        <p class="lead">R$ 38,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/Racao-Umida-Joy-.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Ração úmida - carne & legumes</h2>
+                      <h6>Nature</h3>
+                        <p class="lead">R$ 17,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/racao-golden-formula-caes-adultos.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Ração frango & arroz 10kg </h2>
+                      <h6>Golden fórmula</h3>
+                        <p class="lead">R$ 125,00</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/Antipulgas-e-Carrapatos-Bravecto-45-a-10-kg-para-Caes-250mg-dosagem.png" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Antipulgas e carrapatos 10kg </h2>
+                      <h6>Bravecto</h3>
+                        <p class="lead">R$ 97,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/orelha-joy-bovina-natural-principal.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Orelha bovina natural 1und.</h4>
+                    <h6>Joy</h3>
+                      <p class="lead">R$ 9,90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/areia.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Areia higiênica para gatos 4kg</h4>
+                    <h6>Pipicat</h3>
+                      <p class="lead">R$ 14,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/desinfetante-herbalvet-ta-ourofino-1l.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Desinfetante Herbavelt 1Lt</h2>
+                      <h6>Ourofino</h3>
+                        <p class="lead">R$ 38,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/Racao-Umida-Joy-.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Ração úmida - carne & legumes</h2>
+                      <h6>Nature</h3>
+                        <p class="lead">R$ 17,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/racao-golden-formula-caes-adultos.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Ração frango & arroz 10kg </h2>
+                      <h6>Golden fórmula</h3>
+                        <p class="lead">R$ 125,00</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/Antipulgas-e-Carrapatos-Bravecto-45-a-10-kg-para-Caes-250mg-dosagem.png" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Antipulgas e carrapatos 10kg </h2>
+                      <h6>Bravecto</h3>
+                        <p class="lead">R$ 97,90</p>
+                  </div>
+                </div>
+                <div class="card d-none d-md-block">
+                  <img class="card-img-top" src="img/Produtos/orelha-joy-bovina-natural-principal.webp" alt="areiaparagatos">
+                  <div class="card-body">
+                    <h4>Orelha bovina natural 1und.</h4>
+                    <h6>Joy</h3>
+                      <p class="lead">R$ 9,90</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-cards" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrossel-cards" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="py-3 my-2 bg-light" id="quemSomos">
+    <div class="container my-5">
+      <div class="row justify-content-end">
+        <div class="col-md-5 px-lg-5">
+          <img class="img-fluid mb-4" src="img/dog-gravata.png" alt="cachorro com gravata">
+        </div>
+        <div class="col-md-7 px-5 m-0">
+          <span class="subtitulo">QUEM SOMOS</span>
+          <H2 class="title1 pb-lg-4">Dedicando todo <br>cuidado ao seu amigo</H2>
+          <p class="texto">Somos apaixonados por animais e acreditamos que eles fazem parte da família. Nos dedicamos a oferecer produtos e serviços de alta qualidade para cuidar dos seus companheiros de quatro patas. Nossa missão é proporcionar uma experiência única, onde o bem-estar, saúde e felicidade dos animais são prioridades.</p>
+          <p class="texto"> Com uma equipe de especialistas dedicados, estamos sempre prontos para atender às necessidades dos pets e orientar os seus donos, oferecendo o melhor em produtos para alimentação, cuidados com a pelagem, brinquedos divertidos e muito mais. Nosso compromisso é garantir que cada animal seja tratado com todo o carinho e respeito que merece.
+          </p>
+          <span class="assinatura">Equipe AnimaBox</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-5 text-center" id="nossoTime">
+    <div class="container">
+      <div class="my-3">
+        <span class="subtitulo d-block">EQUIPE</span>
+        <H2 class="title1">Nosso Time de Pet Lovers</H2>
+        <p class="textoTime pb-4">Conheça a equipe apaixonada e dedicada que faz do nossa loja um lugar especial,<br> pronta para atender você e seu pet com todo cuidado e carinho.</p>
+      </div>
+    </div>
+    <div class="row px-5 pb-3">
+      <div class="col-lg-3 col-md-6 border-end">
+        <div style="height: 100px;" class="d-flex justify-content-center mb-4">
+          <img src="img/equipe/ceo.png" class="rounded-circle" alt="passaporte">
+        </div>
+        <h4 class="time">Amanda Turner</h4>
+        <h6 class="cargo">Veterinária e CEO AnimaBox</h6>
+        <p class="timeBio">A especialista amorosa de cães, sempre pronta para dar lambidas de carinho e fornecer orientações personalizadas para os donos mais exigentes.</p>
+      </div>
+      <div class="col-lg-3 col-md-6 border-end">
+        <div style="height: 100px;" class="d-flex justify-content-center mb-4">
+          <img src="img/equipe/time2.PNG" class="rounded-circle" alt="passaporte">
+        </div>
+        <h4 class="time">Sofia Trotsky</h4>
+        <h6 class="cargo">Bióloga</h6>
+        <p class="timeBio">A entusiasta dos animais exóticos, com conhecimento especializado em répteis, aves e pequenos roedores, pronta para ajudar os clientes a encontrarem a dieta e o habitat perfeitos para seus bichinhos únicos.</p>
+      </div>
+      <div class="col-lg-3 col-md-6 border-end">
+        <div style="height: 100px;" class="d-flex justify-content-center mb-4">
+          <img src="img/equipe/adestrador.png" class="rounded-circle" alt="passaporte">
+        </div>
+        <h4 class="time">David Ghrow</h4>
+        <h6 class="cargo">Adestrador</h6>
+        <p class="timeBio">O guru dos gatos, capaz de decifrar os mais enigmáticos miados e proporcionar soluções inteligentes para a felicidade e bem-estar dos felinos.</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div style="height: 100px;" class="d-flex justify-content-center mb-4">
+          <img src="img/equipe/vet.PNG" class="rounded-circle" alt="passaporte">
+        </div>
+        <h4 class="time">Marcela Miranda</h4>
+        <h6 class="cargo">Terapeuta animal</h6>
+        <p class="timeBio">A terapeuta de pelagem, dedicada a transformar os banhos e tosas em experiências relaxantes e luxuosas, deixando os pets deslumbrantes com suas habilidades de grooming.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4 class="h6">PÁGINAS</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Nosso time</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4 class="h6">PRODUTOS</h4>
+          <ul class="list-unstyled">
+            <li><a href="alimentacao.html">Alimentação</a></li>
+            <li><a href="#">Saúde</a></li>
+            <li><a href="#">Acessórios</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-6">
+          <h4 class="h6">CONTATO</h4>
+          <ul class="list-unstyled">
+            <li>animabox@gmail.com.br</li>
+            <li>(61) 9999.0000</li>
+            <li>De segunda a sexta. das 8h às 19h</li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6">
+          <h4 class="h6">REDES SOCIAIS</h4>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class='bx bxl-facebook-circle bx-tada'></i>Facebook</a></li>
+            <li><a href="#"><i class='bx bxl-instagram-alt bx-tada'></i>Instagram</a></li>
+            <li><a href="#"><i class='bx bxl-twitter bx-tada'></i>Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright text-center py-4">
+      <p class="text-white">AnimaBox © 2023. Todos o direitos reservados </p>
+    </div>
+  </footer>
+
+
+
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
